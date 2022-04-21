@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Multas</title>
+</head>
+<body>
+    <h1> Sistema de Multas - Verifique</h1>
+    Velocidade do Carro: <input type="number" id="veltxt"> km/h
+    <br/>
+    <input type="button"  value="Verificar" id='verif' onclick="calcula()">
+    <div id="res">
+        Resultado
+    </div>
+    <script>
+        function calcula(){
+            var vtxt = document.getElementById('veltxt') //lembrando: eu passo a acessar todas as propriedades do elemento(objeto) cuja id é veltxt, do tipo "input", através da variavel vtxt
+            var v = Number(vtxt.value)
+            var r = document.querySelector('div#res')
+            //alert(r)
+            r.innerHTML= `<p>Sua velocidade atual é de <strong>${v}</strong> km/h. </p>`
+            if (v>50){
+                r.innerHTML += `<p> <strong> Multado!</strong> </p>`
+            } else{
+                r.innerHTML += "<p> Obrigado! </p>"
+            }
+        }
+    </script>
+</body>
+</html>

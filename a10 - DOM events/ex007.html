@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 16pt Arial
+        }
+        input{
+            font: normal 14pt Arial;
+            width: 80px;
+        }
+        div#res{
+            margin-top: 100px;
+            height: 100px;
+            width: 100px;
+            background-color: tomato;
+            width: 200px;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="textn1" id="textn1">
+    <input type="number" name="textn2" id="textn2">
+    <input type="button" value="Somar" id="Soma" onclick="somar()">
+    <p id="parag">Resultado</p>
+    <div id="res">Resultado</div>
+</body>
+<script>
+    function somar(){
+        var n1 = Number(document.getElementById("textn1").value) //converte o input em numero (a propriedade value do objeto/elemento "input" é uma string)        //alert(n1)
+        var tn2 = document.querySelector('input#textn2')
+        var n2 = Number(tn2.value)
+        //alert(n2)
+        var s = n1+n2
+        //alert(s)
+        document.getElementById('parag').innerText=s.toString()
+        res.innerHTML=`a soma de ${n1} + ${n2} é <strong> ${s}</strong>`
+
+    }
+</script>
+</html>

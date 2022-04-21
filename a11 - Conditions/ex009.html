@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="entrada">
+        Digite seu país: <input type="text" id="pais">
+        <input type="button" value="Nacionalidade" id="nac" onclick="seleciona()">
+    </div>
+    <div id="saida">
+        Display
+    </div>
+<script>
+    function seleciona(){
+        alert(document.getElementById('pais').value)
+        if (document.getElementById('pais').value=="Brasil"){
+            document.getElementById('saida').innerText="voce é brasileiro"
+        } else{
+            document.getElementById('saida').innerText="voce é estrangeiro"
+        }
+    }
+</script>
+</body>
+</html>

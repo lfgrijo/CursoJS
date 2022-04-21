@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: rgb(185, 185, 226);
+            font: normal 16pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos</h1>
+    <p>Aqui vai o <strong> resultado </strong></p>
+    <div id='msg'>
+        <p> Clique em mim </p>
+    </div>
+    <div name='princ'>
+        <h2>Cabeça</h2>
+    </div>
+        <script>
+        document.writeln(document.URL + '<br>')
+        var p1 = document.getElementsByTagName('p')[0] //guarda o conteudo do primeiro paragrafo em body
+        document.writeln(p1.innerText +'<br>')
+        p1.style.color = 'blue'  //eu passo a acessar o elemento p[0] através da var p1 
+        var corpo = document.body 
+        corpo.style.color='yellow' //posso acessar  o body e mudar o estilo
+        
+        document.write(p1.innerHTML)     //innerhtml traz a formatcao e nao apenas o texto
+        alert(p1.innerText)
+        //selecionando por outros metodos
+        var d = document.getElementById('msg')
+        d.style.background='orange'
+        document.getElementsByName('princ')[0].style.color='brown'
+        </script>
+</body>
+</html>
